@@ -1,1 +1,1 @@
-# TrackMail
+# Task_1_quadratic_equation
