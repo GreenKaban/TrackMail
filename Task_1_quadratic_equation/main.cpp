@@ -12,6 +12,7 @@
  * @date 9/21/2020
  */
 
+
 int main()
 {
     printf ("This is quadratic equation solver!\n");
@@ -42,5 +43,26 @@ int main()
             printf ("Something went wrong...\n");
     }
 
+
+    int answer = -1;
+    printf ("Would you like to see our unit tests? (1 or 0) \n");
+
+    while (scanf ("%d", &answer) != 1)
+        Monkey();
+
+    switch (answer)
+    {
+        case 0:
+            printf ("OK! Goodbye!\n");
+            break;
+        case 1:
+            printf ("OK! Let`s start\n");
+            Testing();
+            break;
+        default:
+            printf("I don`t understand you\n");
+    }
+
     return 0;
 }
+
