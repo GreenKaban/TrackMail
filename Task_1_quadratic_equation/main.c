@@ -1,5 +1,6 @@
-#include <cstdio>
+
 #include "quadr_solve.h"
+#include <stdio.h>
 
 /**
  * @file main.c

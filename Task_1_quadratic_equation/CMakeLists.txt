@@ -5,4 +5,4 @@ set(CMAKE_CXX_STANDARD 14)
 
 include_directories(.)
 
-add_executable(Task_1_quadratic_equation quadr_solve.h main.cpp)
+add_executable(Task_1_quadratic_equation quadr_solve.h main.c quadr_solve.c)
