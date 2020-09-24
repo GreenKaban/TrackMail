@@ -18,12 +18,15 @@
 
 int QuadrSolve (double a, double b, double c, double *x1, double *x2)
 {
+
     if (!(isfinite (a)) || !(isfinite (b)) || !(isfinite (c)))
         exit (EXIT_FAILURE);
 
     assert (x1 != x2);
     assert (x1 != NULL);
     assert (x2 != NULL);
+
+    Normalize(&a, &b, &c);
 
     if (IsZero(a))
     {
@@ -88,6 +91,8 @@ double RandomDouble()
 
 double Parabola (double a, double b, double c, double x)
 {
+//    Normalize(&a, &b, &c);
+
     double value = a * x * x + b * x + c;
 
     return value;
@@ -109,37 +114,90 @@ void Testing()
         double b = RandomDouble();
         double c = RandomDouble();
 
-        double x1 = 0, x2 = 0;
-        int testSolNumb = QuadrSolve (a, b, c, &x1, &x2);
+       TestOne(a, b, c);
 
-        printf ("For a = %lf, b = %lf, c = %lf coefficients\n", a, b, c);
+    }
+}
 
-        switch (testSolNumb)
-        {
-            case 0:
-                printf ("No roots\n");
+int Normalize (double *a, double *b, double *c){
+    double min = fmin(fmin(*a, *b), *c);
+    int ex_min = 0;
+    frexp (min , &ex_min);
+    if (ex_min>-23) {
+        return 1;
+    }
+    int ex_max = 0;
+    double max = fmax(fmax(*a, *b), *c);
+    frexp (max , &ex_max);
 
-                ///We can be sure in this result because the sign and value of the discriminant is calculated exactly
-                printf ("Test passed\n");
-                break;
+    if (1023-ex_max > -22 - ex_min){
 
-            case INF_ROOTS:
-                printf ("Infinite solution number\n");
-                printf ("Test passed\n");
-                break;
+        int p = -22 - ex_min;
+        *a = ldexp(*a, p);
+        *b = ldexp(*b, p);
+        *c = ldexp(*c, p);
+        return 0;
+    }
 
-            default:
-                printf ("root1 = %lf, root2 = %lf\n", x1, x2);
+//    printf("%lg %lg %lg", *a, *b, *c);
 
-                if (QuadrZero (a, b, c, x1, x2))
-                {
-                    printf ("Test passed!\n \n");
-                }
-                else
-                {
-                    printf ("Failed\n");
-                }
+
+    return 1;
+}
+
+
+
+void TestingFromFile( char* name){
+    FILE *in = fopen(name, "r");
+    double a = 0,  b = 0, c =0;
+
+    if (in != NULL) {
+        while ( !feof(in)){
+            fscanf(in, "%lg %lg %lg", &a, &b, &c);
+            TestOne(a, b, c);
+
         }
+//        printf("%lg %lg %lg", a, b, c);
+    } else{
+        printf("%s %s %s ""file", name, "dont open\n");
+    }
 
+    fclose(in);
+
+
+}
+
+
+void TestOne (double a, double b, double c){
+    double x1 = 0, x2 = 0;
+    int testSolNumb = QuadrSolve (a, b, c, &x1, &x2);
+
+    printf ("For a = %lf, b = %lf, c = %lf coefficients\n", a, b, c);
+
+    switch (testSolNumb)
+    {
+        case 0:
+            printf ("No roots\n");
+
+            ///We can be sure in this result because the sign and value of the discriminant is calculated exactly
+            printf ("Test passed\n");
+            break;
+
+        case INF_ROOTS:
+            printf ("Infinite solution number\n");
+            printf ("Test passed\n");
+            break;
+
+        default:
+            printf ("root1 = %lf, root2 = %lf\n", x1, x2);
+
+            if (QuadrZero (a, b, c, x1, x2))
+            {
+                printf ("Test passed!\n \n");
+            }
+            else
+            {
+                printf ("Failed\n");
+            }
     }
 }

@@ -107,6 +107,33 @@ bool QuadrZero (double a, double b, double c, double x1, double x2);
 double Parabola (double a, double b, double c, double x);
 
 
+/**
+ * This function normalizes a triple of numbers
+ *
+ * @param a
+ * @param b
+ * @param c
+ * @return 0 if normalization has occurred, otherwise 1
+ */
+int Normalize (double *a, double *b, double *c);
+
+/**
+ * This function takes tests from a file
+ *
+ * @param name
+ */
+void TestingFromFile(char* name);
+
+
+/**
+ *
+ * This function checks the solution of a single equation
+ *
+ * @param a
+ * @param b
+ * @param c
+ */
+void TestOne (double a, double b, double c);
 
 
 

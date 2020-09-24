@@ -1,6 +1,8 @@
 
 #include "quadr_solve.h"
 #include <stdio.h>
+#include <time.h>
+#include <conio.h>
 
 /**
  * @file main.c
@@ -18,6 +20,7 @@ int main()
 {
     printf ("This is quadratic equation solver!\n");
     printf ("Please, input a, b, c\n");
+
 
     double a = 0, b = 0, c = 0;
     while (scanf ("%lf %lf %lf", &a, &b, &c) != 3)
@@ -51,18 +54,39 @@ int main()
     while (scanf ("%d", &answer) != 1)
         Monkey();
 
+
     switch (answer)
     {
         case 0:
             printf ("OK! Goodbye!\n");
             break;
-        case 1:
-            printf ("OK! Let`s start\n");
-            Testing();
+        case 1: {
+            int file_or_rand = -1;
+            printf ("Would you like to use test from file (0) or random tests (1)? \n");
+
+            while (scanf("%d", &file_or_rand) != 1)
+                Monkey();
+            switch (file_or_rand)
+            {
+                case 0:
+                    TestingFromFile("tests.txt");
+                    break;
+                case 1:
+                    printf ("OK! Let`s start\n");
+                    srand (time (NULL));
+                    Testing();
+                    break;
+                default:
+                    printf("I don`t understand you\n");
+
+            }
             break;
+        }
         default:
             printf("I don`t understand you\n");
     }
+
+    getch(); ///Wait before close
 
     return 0;
 }
