@@ -1,5 +1,6 @@
 
 #include "quadr_solve.h"
+#include "testing.h"
 #include <stdio.h>
 #include <time.h>
 #include <conio.h>

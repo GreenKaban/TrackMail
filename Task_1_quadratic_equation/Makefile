@@ -1,2 +1,2 @@
 all:
-    gcc main.c quadr_solve.c -o main
+    gcc main.c quadr_solve.c testing.c -o main
