@@ -19,7 +19,7 @@
 
 
 
-int main(){
+int main() {
 
     TestAll();
 
