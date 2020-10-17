@@ -1,6 +1,5 @@
 #include "tester.h"
 #include "sorter.h"
-#include "converter.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <fcntl.h>
