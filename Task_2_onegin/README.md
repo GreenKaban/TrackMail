@@ -2,7 +2,7 @@
 
 my_string.h, .c contain the functions Strlen, Strcmp, Strcat, Strtok
 
-main.c starts testing functions from my_string.h
+main.cpp starts 2 types of sorting (Input: origin.txt, output: remake1.txt remake1.txt) 
 
 How to use: 
 1. make

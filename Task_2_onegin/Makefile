@@ -1,2 +1,2 @@
 all:
-    gcc main.c my_string.c testing.c -o main
+    g++ main.cpp sorter.cpp tester.cpp -o main
