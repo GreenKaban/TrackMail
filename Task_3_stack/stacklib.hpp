@@ -39,16 +39,16 @@ static char stack_fail_code[][80] =
 /*10*/ "FAIL: Stack buffer has been attacked from left (cuckoo_high departed)",
 /*11*/ "FAIL: Stack buffer has been corrupted (hashsum not valid)"};
 
-///--------------------------------------------------------------------
-/// Calculate polinomial hash of byte string from in [begin, end) range
-/// Doesn't check any boundaries, cause I don't know how.
-/// Anyway, it shouldn't ruin any memory contents.
-/// 
-/// @param begin    begining of the range
-/// @param end      end of the range
-/// 
-/// @return     polinomial hash.
-///--------------------------------------------------------------------
+
+
+/**
+ * @brief Calculate polinomial hash of byte string from in [begin, end) range
+ * Doesn't check any boundaries, cause I don't know how.
+ * Anyway, it shouldn't ruin any memory contents.
+ * @param begin begining of the range
+ * @param end end of the range
+ * @return polinomial hash.
+ */
 hash_t calc_hash(char *begin, char *end) {
    const uint64_t prime = 353; //Just a radom prime number
    uint64_t multiplicator = 1;
