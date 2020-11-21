@@ -1,0 +1,19 @@
+# Hello, world!
+
+
+push 'H' outchar
+push 'e' outchar
+push 'l' outchar
+push 'l' outchar
+push 'o' outchar
+push ',' outchar
+push ' ' outchar
+push 'w' outchar
+push 'o' outchar
+push 'r' outchar
+push 'l' outchar
+push 'd' outchar
+push '!' outchar
+push '
+' outchar
+end

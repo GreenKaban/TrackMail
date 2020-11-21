@@ -1,0 +1,84 @@
+push 'a' outchar      # Print 'a = '
+push ' ' outchar
+push '=' outchar
+push ' ' outchar
+
+in                    # Read a
+put a                 # and put it in {a}
+
+push 'b' outchar      # Print 'b = '
+push ' ' outchar
+push '=' outchar
+push ' ' outchar
+
+in                    # Read b
+put b                 # and put it in {b}
+
+push 'c' outchar      # Print 'c = '
+push ' ' outchar
+push '=' outchar
+push ' ' outchar
+
+in                    # Read c
+put c                 # and put it in {c}
+
+take b                # Calculate discriminant = b^2 - 4*a*c
+take b                # and put it in {d}
+mul
+push 4
+take a
+take c
+mul
+mul
+sub
+put d
+
+push 0                # Calculate first root = (-b + sqrt(d)) / (2*a)
+take b                # and put it in {x}
+sub
+take d
+sqrt
+add
+push 2
+take a
+mul
+div
+put x
+
+push 0                # Calculate first root = (-b - sqrt(d)) / (2*a)
+take b                # and put it in {y}
+sub
+take d
+sqrt
+sub
+push 2
+take a
+mul
+div
+put y
+
+push 'x' outchar      # Print 'x1 = '
+push '1' outchar
+push ' ' outchar
+push '=' outchar
+push ' ' outchar
+
+take x                # Print first root
+out
+
+push '
+' outchar             # Print '\n'
+
+push 'x' outchar      # Print 'x2 = '
+push '2' outchar
+push ' ' outchar
+push '=' outchar
+push ' ' outchar
+
+take y                # Print second root
+out
+
+push '
+' outchar             # Print '\n'
+
+end

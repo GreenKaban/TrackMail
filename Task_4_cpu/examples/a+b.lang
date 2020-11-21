@@ -1,0 +1,28 @@
+push 'a' outchar      # Print 'a b = '
+push ' ' outchar
+push 'b' outchar
+push ' ' outchar
+push '=' outchar
+push ' ' outchar
+
+in                    # Read a and print it
+dup out
+
+push ' ' outchar      # Print ' + '
+push '+' outchar
+push ' ' outchar
+
+in                    # Read b and print it
+dup out
+
+push ' ' outchar      # Print ' = '
+push '=' outchar
+push ' ' outchar
+
+add                   # Print a + b
+out
+
+push '
+' outchar             # Print '\n'
+
+end                   # End program
