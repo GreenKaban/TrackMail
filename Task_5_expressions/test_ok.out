@@ -1,0 +1,830 @@
+(( (1) + (2) )-(3)) * 5
+read result: 0
+err_idx: 23
+
+expression:
+      1.000000
+    +
+      2.000000
+  -
+    3.000000
+*
+  5.000000
+
+
+copied expression:
+      1.000000
+    +
+      2.000000
+  -
+    3.000000
+*
+  5.000000
+
+
+simplified expression:
+0.000000
+
+
+differentiated expression:
+0.000000
+
+
+simplified differentiated expression:
+0.000000
+
+
+((( (1) + (2) )-(3)) * ((-(5)) / (3)))
+read result: 0
+err_idx: 38
+
+expression:
+      1.000000
+    +
+      2.000000
+  -
+    3.000000
+*
+      0.000000
+    -
+      5.000000
+  /
+    3.000000
+
+
+copied expression:
+      1.000000
+    +
+      2.000000
+  -
+    3.000000
+*
+      0.000000
+    -
+      5.000000
+  /
+    3.000000
+
+
+simplified expression:
+-0.000000
+
+
+differentiated expression:
+0.000000
+
+
+simplified differentiated expression:
+0.000000
+
+
+((( (1) + (2) )-((7) + (2.3))) * ((-(5)) / (3)))
+read result: 0
+err_idx: 48
+
+expression:
+      1.000000
+    +
+      2.000000
+  -
+      7.000000
+    +
+      2.300000
+*
+      0.000000
+    -
+      5.000000
+  /
+    3.000000
+
+
+copied expression:
+      1.000000
+    +
+      2.000000
+  -
+      7.000000
+    +
+      2.300000
+*
+      0.000000
+    -
+      5.000000
+  /
+    3.000000
+
+
+simplified expression:
+10.500000
+
+
+differentiated expression:
+0.000000
+
+
+simplified differentiated expression:
+0.000000
+
+
+((2) + (sin((x)^(0.5))))
+read result: 0
+err_idx: 24
+
+expression:
+  2.000000
++
+  sin
+      x
+    ^
+      0.500000
+
+
+copied expression:
+  2.000000
++
+  sin
+      x
+    ^
+      0.500000
+
+
+simplified expression:
+  2.000000
++
+  sin
+      x
+    ^
+      0.500000
+
+
+differentiated expression:
+  0.000000
++
+    cos
+        x
+      ^
+        0.500000
+  *
+        x
+      ^
+        0.500000
+    *
+            1.000000
+          /
+            x
+        *
+          0.500000
+      +
+          0.000000
+        *
+          ln
+            x
+
+
+simplified differentiated expression:
+  cos
+      x
+    ^
+      0.500000
+*
+      x
+    ^
+      0.500000
+  *
+        1.000000
+      /
+        x
+    *
+      0.500000
+
+
+((5) + (meow))
+read result: 2
+err_idx: 9
+
+expression:
+
+
+copied expression:
+
+
+simplified expression:
+
+
+differentiated expression:
+
+
+simplified differentiated expression:
+
+
+((sin(x))^(2))
+read result: 0
+err_idx: 14
+
+expression:
+  sin
+    x
+^
+  2.000000
+
+
+copied expression:
+  sin
+    x
+^
+  2.000000
+
+
+simplified expression:
+  sin
+    x
+^
+  2.000000
+
+
+differentiated expression:
+    sin
+      x
+  ^
+    2.000000
+*
+          cos
+            x
+        *
+          1.000000
+      /
+        sin
+          x
+    *
+      2.000000
+  +
+      0.000000
+    *
+      ln
+        sin
+          x
+
+
+simplified differentiated expression:
+    sin
+      x
+  ^
+    2.000000
+*
+      cos
+        x
+    /
+      sin
+        x
+  *
+    2.000000
+
+
+(((z) + (((4) + (3)) - (7))) * (1))
+read result: 0
+err_idx: 35
+
+expression:
+    z
+  +
+        4.000000
+      +
+        3.000000
+    -
+      7.000000
+*
+  1.000000
+
+
+copied expression:
+    z
+  +
+        4.000000
+      +
+        3.000000
+    -
+      7.000000
+*
+  1.000000
+
+
+simplified expression:
+z
+
+
+differentiated expression:
+0.000000
+
+
+simplified differentiated expression:
+0.000000
+
+
+(((x)^(0)) + ((2)^(1)))
+read result: 0
+err_idx: 23
+
+expression:
+    x
+  ^
+    0.000000
++
+    2.000000
+  ^
+    1.000000
+
+
+copied expression:
+    x
+  ^
+    0.000000
++
+    2.000000
+  ^
+    1.000000
+
+
+simplified expression:
+3.000000
+
+
+differentiated expression:
+0.000000
+
+
+simplified differentiated expression:
+0.000000
+
+
+((ln(x)) + (ln(2)))
+read result: 0
+err_idx: 19
+
+expression:
+  ln
+    x
++
+  ln
+    2.000000
+
+
+copied expression:
+  ln
+    x
++
+  ln
+    2.000000
+
+
+simplified expression:
+  ln
+    x
++
+  0.693147
+
+
+differentiated expression:
+    1.000000
+  /
+    x
++
+  0.000000
+
+
+simplified differentiated expression:
+  1.000000
+/
+  x
+
+
+a^b^    c +3 *   9
+read result: 0
+err_idx: 18
+
+expression:
+    a
+  ^
+      b
+    ^
+      c
++
+    3.000000
+  *
+    9.000000
+
+
+copied expression:
+    a
+  ^
+      b
+    ^
+      c
++
+    3.000000
+  *
+    9.000000
+
+
+simplified expression:
+    a
+  ^
+      b
+    ^
+      c
++
+  27.000000
+
+
+differentiated expression:
+      a
+    ^
+        b
+      ^
+        c
+  *
+          0.000000
+        /
+          a
+      *
+          b
+        ^
+          c
+    +
+            b
+          ^
+            c
+        *
+                0.000000
+              /
+                b
+            *
+              c
+          +
+              0.000000
+            *
+              ln
+                b
+      *
+        ln
+          a
++
+  0.000000
+
+
+simplified differentiated expression:
+0.000000
+
+
+- 7^2
+read result: 0
+err_idx: 5
+
+expression:
+  0.000000
+-
+    7.000000
+  ^
+    2.000000
+
+
+copied expression:
+  0.000000
+-
+    7.000000
+  ^
+    2.000000
+
+
+simplified expression:
+-49.000000
+
+
+differentiated expression:
+0.000000
+
+
+simplified differentiated expression:
+0.000000
+
+
+(- 7)^2
+read result: 0
+err_idx: 7
+
+expression:
+    0.000000
+  -
+    7.000000
+^
+  2.000000
+
+
+copied expression:
+    0.000000
+  -
+    7.000000
+^
+  2.000000
+
+
+simplified expression:
+49.000000
+
+
+differentiated expression:
+0.000000
+
+
+simplified differentiated expression:
+0.000000
+
+
+2 * -7
+read result: 2
+err_idx: 4
+
+expression:
+
+
+copied expression:
+
+
+simplified expression:
+
+
+differentiated expression:
+
+
+simplified differentiated expression:
+
+
+(1 + 2 - 3) * 5
+read result: 0
+err_idx: 15
+
+expression:
+      1.000000
+    +
+      2.000000
+  -
+    3.000000
+*
+  5.000000
+
+
+copied expression:
+      1.000000
+    +
+      2.000000
+  -
+    3.000000
+*
+  5.000000
+
+
+simplified expression:
+0.000000
+
+
+differentiated expression:
+0.000000
+
+
+simplified differentiated expression:
+0.000000
+
+
+(1 + 2 - 3) * (-5 / 3)
+read result: 0
+err_idx: 22
+
+expression:
+      1.000000
+    +
+      2.000000
+  -
+    3.000000
+*
+    0.000000
+  -
+      5.000000
+    /
+      3.000000
+
+
+copied expression:
+      1.000000
+    +
+      2.000000
+  -
+    3.000000
+*
+    0.000000
+  -
+      5.000000
+    /
+      3.000000
+
+
+simplified expression:
+-0.000000
+
+
+differentiated expression:
+0.000000
+
+
+simplified differentiated expression:
+0.000000
+
+
+(1 + 2 - (7 + 2.3)) * (-5) / 3
+read result: 0
+err_idx: 30
+
+expression:
+        1.000000
+      +
+        2.000000
+    -
+        7.000000
+      +
+        2.300000
+  *
+      0.000000
+    -
+      5.000000
+/
+  3.000000
+
+
+copied expression:
+        1.000000
+      +
+        2.000000
+    -
+        7.000000
+      +
+        2.300000
+  *
+      0.000000
+    -
+      5.000000
+/
+  3.000000
+
+
+simplified expression:
+10.500000
+
+
+differentiated expression:
+0.000000
+
+
+simplified differentiated expression:
+0.000000
+
+
+2 + sin  (x^0.5)
+read result: 0
+err_idx: 16
+
+expression:
+  2.000000
++
+  sin
+      x
+    ^
+      0.500000
+
+
+copied expression:
+  2.000000
++
+  sin
+      x
+    ^
+      0.500000
+
+
+simplified expression:
+  2.000000
++
+  sin
+      x
+    ^
+      0.500000
+
+
+differentiated expression:
+  0.000000
++
+    cos
+        x
+      ^
+        0.500000
+  *
+        x
+      ^
+        0.500000
+    *
+            1.000000
+          /
+            x
+        *
+          0.500000
+      +
+          0.000000
+        *
+          ln
+            x
+
+
+simplified differentiated expression:
+  cos
+      x
+    ^
+      0.500000
+*
+      x
+    ^
+      0.500000
+  *
+        1.000000
+      /
+        x
+    *
+      0.500000
+
+
++5
+read result: 2
+err_idx: 0
+
+expression:
+
+
+copied expression:
+
+
+simplified expression:
+
+
+differentiated expression:
+
+
+simplified differentiated expression:
+
+
+2 + sin x^2.5
+read result: 2
+err_idx: 8
+
+expression:
+
+
+copied expression:
+
+
+simplified expression:
+
+
+differentiated expression:
+
+
+simplified differentiated expression:
+
+
+-sin(cos(1))
+read result: 0
+err_idx: 12
+
+expression:
+  0.000000
+-
+  sin
+    cos
+      1.000000
+
+
+copied expression:
+  0.000000
+-
+  sin
+    cos
+      1.000000
+
+
+simplified expression:
+-0.514395
+
+
+differentiated expression:
+0.000000
+
+
+simplified differentiated expression:
+0.000000
+
+
